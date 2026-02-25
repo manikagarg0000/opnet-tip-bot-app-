@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OP_NET Tip Bot App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Bitcoin Tip Bot Web App</h1>
+
+  <section>
+    <h2>Send Tip</h2>
+    <button onclick="sendTip()">Send tBTC Tip</button>
+  </section>
+
+  <section>
+    <h2>Mint NFT</h2>
+    <button onclick="mintNFT()">Mint NFT</button>
+  </section>
+
+  <section>
+    <h2>Deploy Token</h2>
+    <button onclick="deployToken()">Deploy Token</button>
+  </section>
+
+  <section>
+    <h2>Buy / Sell / Claim Token</h2>
+    <button onclick="buyToken()">Buy Token</button>
+    <button onclick="sellToken()">Sell Token</button>
+    <button onclick="claimToken()">Claim Token</button>
+  </section>
+
+  <section>
+    <h2>Faucet</h2>
+    <a href="https://faucet.opnet.org" target="_blank">Claim tBTC from Faucet</a>
+  </section>
+
+  <section id="musicPlayer">
+    <h2>Background Music</h2>
+    <button onclick="toggleMusic()">Play/Pause Music</button>
+    <iframe id="ytplayer" width="0" height="0"
+      src="https://www.youtube.com/embed/fyHkM0RJmiU?enablejsapi=1"
+      frameborder="0"></iframe>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
