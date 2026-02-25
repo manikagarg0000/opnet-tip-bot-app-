@@ -61,13 +61,19 @@ function claimToken() {
 
 // Background Music Toggle
 let musicOn = true;
+
 function toggleMusic() {
   const player = document.getElementById("ytplayer").contentWindow;
+  const eqBox = document.querySelector(".eq");
+
   if (musicOn) {
     player.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    eqBox.classList.add("paused");
     musicOn = false;
   } else {
     player.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    eqBox.classList.remove("paused");
     musicOn = true;
   }
 }
+
