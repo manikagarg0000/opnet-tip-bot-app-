@@ -7,10 +7,10 @@ function isWalletInstalled() {
 function sendTip() {
   if (isWalletInstalled()) {
     window.opnet.sendBitcoin(
-      "opt1p9h9xzq9e0lcpkenag03ydq2y43y7pgxf7jwuusu2ajchlkaaxf8sseujqh", // testnet address
+      "opt1p9h9xzq9e0lcpkenag03ydq2y43y7pgxf7jwuusu2ajchlkaaxf8sseujqh", // তোমার testnet address
       1000, // sats
       1,    // feeRate
-      { memo: "Tip from OP_NET Tip Bot" } // metadata for popup
+      { memo: "Tip from OP_NET Tip Bot" }
     )
     .then(tx => alert("✅ Tip sent! TX: " + tx))
     .catch(err => alert("❌ Error: " + err));
