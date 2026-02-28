@@ -19,6 +19,22 @@ button {
   font-weight: bold;
 }
 
-section {
-  margin: 20px 0;
+/* Music EQ */
+.music-box{
+  display:flex;align-items:center;gap:7px;
+  background:#222;border:1px solid #444;padding:5px 12px;
+  font-family:'Share Tech Mono',monospace;font-size:.6rem
 }
+.eq{display:flex;align-items:flex-end;gap:2px;height:14px}
+.eq-b{width:3px;border-radius:1px;background:orange;
+  animation:eq .7s ease-in-out infinite alternate}
+.eq-b:nth-child(1){height:5px;animation-delay:0s}
+.eq-b:nth-child(2){height:9px;animation-delay:.12s}
+.eq-b:nth-child(3){height:13px;animation-delay:.24s}
+.eq-b:nth-child(4){height:7px;animation-delay:.08s}
+@keyframes eq{from{transform:scaleY(.25);opacity:.3}to{transform:scaleY(1);opacity:1}}
+.eq.paused .eq-b{animation-play-state:paused}
+.track-name{color:cyan;max-width:130px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.music-btn{background:none;border:none;color:orange;cursor:pointer;font-size:.95rem;
+  width:24px;height:24px;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.music-btn:hover{transform:scale(1.25)}
